@@ -1,5 +1,5 @@
 // Lưu sẵn giao diện để mở được khi mất mạng. Không đụng tới request gửi lên Google Sheets.
-const CACHE = 'chitieu-v4';
+const CACHE = 'chitieu-v5';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
